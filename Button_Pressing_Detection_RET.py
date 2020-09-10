@@ -30,7 +30,6 @@ def main(list_buttons):
             th_Button_Pressing_Detection.start()
         # create an instance of Button_Pressing_Detection_Parameter_socket that hereditate from the Button_Pressing_Detection_Parameter
         socket_server = Button_Pressing_Detection_socket.Rpi_SocketServer_RET(parameter)
-        socket_server.open_socket_connection()
     except KeyboardInterrupt:
         config_test.stop_thread = True
 

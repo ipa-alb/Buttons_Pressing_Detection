@@ -15,6 +15,9 @@ class RET_Parameter(config_test.Button_Definition):
         self.RET_driver = ""
         self.start_RET = True
         self.stop_thread = False
+        self.acceleration_factor = config_test.acceleration_factor
+        self.velocity_factor = config_test.velocity_factor
+        self.robot_settle_time = config_test.robot_settle_time
         #### Parameter about the button Detection
         ##static parameter
         self.list_buttons = list_buttons
@@ -38,7 +41,6 @@ class RET_Parameter(config_test.Button_Definition):
         self.dx = config_test.dx
         self.dy = config_test.dy
         self.dz = config_test.dz
-        self.acceleration_factor = config_test.acceleration_factor
         ##changing parameter
         self.list_msg_entering_Btn_area = []
         self.Btn_Unpressed_Time = datetime.datetime.utcnow()
@@ -46,10 +48,13 @@ class RET_Parameter(config_test.Button_Definition):
         self.Btn_Pressed_in_Time_Interval = False
         #### Parameter that are to change during the RET concerning the data processing
         ##static parameter
-        self.influxdb = "RET_Test"
-        self.influxdb_measurement = "RET_Test_" + self.list_name_Btn + str(self.list_buttons_positions) + "_[" + str(self.dx) + ";" + str(self.dy) + ";" + str(self.dz) + "]_AccelerationFactor_[" + str(self.acceleration_factor) + "]" +"_bouncetime_"+ "[" + str(self.list_bouncetime) + "_"
-        self.influxdb_host = "localhost"
-        self.influxdb_port = "8086"
+        self.influxdb = config_test.influxdb
+        self.influxdb_measurement = ("RET_Test_" + self.list_name_Btn + str(self.list_buttons_positions) + "_[" + str(self.dx) + ";" + 
+        str(self.dy) + ";" + str(self.dz) +"_bouncetime_"+ "[" + str(self.list_bouncetime) + "]_AccelerationFactor_[" + str(self.acceleration_factor) +
+        "]_VelocityFactor_[" + str(self.velocity_factor) + "]" + "_robot_settle_time_[" + str(self.robot_settle_time) + "]_")
+        ## we can also add a date to the measurement for more precision
+        self.influxdb_host = config_test.influxdb_host
+        self.influxdb_port = config_test.influxdb_port
         ##changing parameter
         self.write_into_measurement = False
         self.realtime_processing = True
