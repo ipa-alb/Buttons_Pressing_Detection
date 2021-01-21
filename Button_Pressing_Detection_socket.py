@@ -7,7 +7,7 @@ Created on Tue Jan 19 13:52:41 2021
 """
 
 import socket,sys,threading
-
+import config
 import Button_Pressing_Detection_parameter as RET_Param
 
 class Rpi_ReceiveMsg_Computer(threading.Thread):
@@ -23,7 +23,7 @@ class Rpi_ReceiveMsg_Computer(threading.Thread):
         
     def run(self):
         nom = self.getName() 
-        while 1:
+        while config.stop_thread == False:
             msgClient = self.connection.recv(1024)
             if msgClient.upper() == "END" or msgClient =="":
                 break
@@ -46,7 +46,7 @@ class Rpi_ReceiveMsg_Computer(threading.Thread):
                 if cle != nom:      # do not send it back to the one who emit it
                     self.conn_client[cle].send(message)
         self.connection.close()      # cut connexion from the server with client
-        del self.conn_client[nom]        # suppress his entrance from the dictionnary
+#        del self.conn_client[nom]        # suppress his entrance from the dictionnary
         print "Client %s disconnected." % nom
         # The thread is done here   
 
@@ -58,17 +58,14 @@ class Rpi_SendMsg_Computer(threading.Thread):
         self.msg = "pressed"
         
     def run(self):
-        while 1:
-            for button in self.parameter.list_button:
+        while config.stop_thread == False:
+            for button in self.parameter.list_buttons:
                 if button.Btn_send_information == True:
                     self.connection.send(str(self.parameter.time_Btn_Pressed)+";"+button.Btn_name+";"+self.msg)
                     button.Btn_send_information = False
-#            if self.parameter.Btn1.Btn_send_information == True:
-#                self.connection.send(str(self.parameter.Btn_Pressed_Time)+";"+self.parameter.Btn1.Btn_name+";"+self.msg)
-#                self.parameter.Btn2.Btn_send_information = False
-#            if self.parameter.Btn2_send_information == True:
-#                self.connection.send(str(self.parameter.Btn_Pressed_Time)+";"+self.parameter.Btn.Btn_name+";"+self.msg)
-#                self.parameter.Btn2_send_information = False  
+
+
+
 
 class Rpi_SocketServer_RET(RET_Param.RET_Parameter):
     def __init__(self,parameter):
@@ -80,7 +77,7 @@ class Rpi_SocketServer_RET(RET_Param.RET_Parameter):
             sys.exit()
         print "Servor ready, waiting for answer.."
         self.mySocket.listen(5)
-        while 1:    
+        while config.stop_thread == False:
             connection, address = self.mySocket.accept()# Accept the connection of client
             client_connection = {}
             th_Rpi_ReceiveMsg_Computer = Rpi_ReceiveMsg_Computer(connection,client_connection,parameter)
@@ -91,6 +88,8 @@ class Rpi_SocketServer_RET(RET_Param.RET_Parameter):
             th_Rpi_SendMsg_Computer.start()
             # Dialogue avec le client :
             connection.send("You are connected. Send your message.")
+
+
     
 
 

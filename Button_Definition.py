@@ -12,7 +12,7 @@ class Button_Definition():
         self.Btn_name = name
         self.Btn_send_information = False
         self.bouncetime = bouncetime
-        self.x = 0
-        self.y = 0
-        self.z = 0
+        self.x = x
+        self.y = y
+        self.z = z
         pass
