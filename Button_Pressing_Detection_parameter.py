@@ -6,9 +6,9 @@ Created on Tue Jan 19 13:55:11 2021
 @author: ubuntu
 """
 import datetime
-import Button_Definition
+import config_test
 
-class RET_Parameter(Button_Definition.Button_Definition):
+class RET_Parameter(config_test.Button_Definition):
     def __init__(self,list_buttons):
         #### Global Parameter of the RET
         self.time_begin_RET = datetime.datetime.utcnow()

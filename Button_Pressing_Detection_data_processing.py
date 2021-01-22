@@ -9,7 +9,7 @@ import datetime
 import Button_Pressing_Detection_parameter as RET_Param
 from influxdb import InfluxDBClient
 import sys,threading
-import config
+import config_test
 
 class Rpi_data_processing_RET(threading.Thread,RET_Param.RET_Parameter,InfluxDBClient):
     def __init__(self,parameter):
@@ -75,7 +75,7 @@ class Rpi_data_processing_RET(threading.Thread,RET_Param.RET_Parameter,InfluxDBC
     
     def run(self):
         self.write_into_influxdb(self.parameter)
-        while config.stop_thread == False:
+        while config_test.stop_thread == False:
             if self.parameter.process_information == True:
                 print("Launch of the process")
                 self.compare_time(self.parameter)

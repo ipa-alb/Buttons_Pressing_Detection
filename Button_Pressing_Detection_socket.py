@@ -7,7 +7,7 @@ Created on Tue Jan 19 13:52:41 2021
 """
 
 import socket,sys,threading
-import config
+import config_test
 import Button_Pressing_Detection_parameter as RET_Param
 
 class Rpi_ReceiveMsg_Computer(threading.Thread):
@@ -23,7 +23,7 @@ class Rpi_ReceiveMsg_Computer(threading.Thread):
         
     def run(self):
         nom = self.getName() 
-        while config.stop_thread == False:
+        while config_test.stop_thread == False:
             msgClient = self.connection.recv(1024)
             if msgClient.upper() == "END" or msgClient =="":
                 break
@@ -58,7 +58,7 @@ class Rpi_SendMsg_Computer(threading.Thread):
         self.msg = "pressed"
         
     def run(self):
-        while config.stop_thread == False:
+        while config_test.stop_thread == False:
             for button in self.parameter.list_buttons:
                 if button.Btn_send_information == True:
                     self.connection.send(str(self.parameter.time_Btn_Pressed)+";"+button.Btn_name+";"+self.msg)
@@ -77,7 +77,7 @@ class Rpi_SocketServer_RET(RET_Param.RET_Parameter):
             sys.exit()
         print "Servor ready, waiting for answer.."
         self.mySocket.listen(5)
-        while config.stop_thread == False:
+        while config_test.stop_thread == False:
             connection, address = self.mySocket.accept()# Accept the connection of client
             client_connection = {}
             th_Rpi_ReceiveMsg_Computer = Rpi_ReceiveMsg_Computer(connection,client_connection,parameter)

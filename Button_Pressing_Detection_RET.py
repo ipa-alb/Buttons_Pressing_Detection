@@ -5,13 +5,12 @@ Created on Tue Jan 19 13:51:34 2021
 
 @author: ubuntu
 """
-import Button_Definition
+
 import Button_Pressing_Detection_parameter
 import Button_Pressing_Detection_socket 
 import Button_Pressing_Detection_data_processing
 import Button_Pressing_Detection
-import config
-import threading
+import config_test
 
     
 def main(list_buttons):
@@ -33,15 +32,13 @@ def main(list_buttons):
         socket_server = Button_Pressing_Detection_socket.Rpi_SocketServer_RET(parameter)
         socket_server.open_socket_connection()
     except KeyboardInterrupt:
-        config.stop_thread = True
-        for i in threading.enumerate():
-            i.is_alive()
+        config_test.stop_thread = True
 
              
 
 if __name__ == "__main__":
-    Btn1 = Button_Definition.Button_Definition(29,"Btn1",500,0.1,-0.5,0.316)
-    Btn2 = Button_Definition.Button_Definition(19,"Btn2",500,0.05,-0.5,0.316)
-    list_buttons=[Btn1,Btn2]
+    test_running=raw_input("RET or ButtonTesting?")
+    if test_running == "RET":
+        list_buttons = config_test.list_two_buttons_RET
     main(list_buttons)
     
