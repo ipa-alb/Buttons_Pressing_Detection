@@ -33,12 +33,12 @@ class RET_Parameter(config_test.Button_Definition):
         self.time_Btn_Pressed = datetime.datetime.utcnow()
         #### Parameter concerning the socket message
         ##static parameter
-        self.socket_host = '10.4.11.117'
-        self.socket_port = 5030
-        self.dx = 0.06
-        self.dy = 0.08
-        self.dz = 0.05
-        self.acceleration_factor = 1.7
+        self.socket_host = config_test.socket_host
+        self.socket_port = config_test.socket_port
+        self.dx = config_test.dx
+        self.dy = config_test.dy
+        self.dz = config_test.dz
+        self.acceleration_factor = config_test.acceleration_factor
         ##changing parameter
         self.list_msg_entering_Btn_area = []
         self.Btn_Unpressed_Time = datetime.datetime.utcnow()

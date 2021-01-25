@@ -31,10 +31,10 @@ class Rpi_ReceiveMsg_Computer(threading.Thread):
             print "*" + msgClient + "*"
             try :
                 self.list_msg = msgClient.split(";")
-                if self.list_msg[2]=='enter': # knowing in which phase we are
+                if self.list_msg[2]=='entering': # knowing in which phase we are
                     #I am logging the whole message in order to process the time comparison during the time_interval the robot is moving from Btn1 to Btn2
                     self.parameter.list_msg_entering_Btn_area = self.list_msg
-                if self.list_msg[2]=='leave':
+                if self.list_msg[2]=='leaving':
                     self.parameter.list_msg_leaving_Btn_area = self.list_msg
                     #LAUNCH THE DATA PROCESSING
                     self.parameter.process_information = True
