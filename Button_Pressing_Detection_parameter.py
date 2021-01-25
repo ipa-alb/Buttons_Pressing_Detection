@@ -47,7 +47,7 @@ class RET_Parameter(config_test.Button_Definition):
         #### Parameter that are to change during the RET concerning the data processing
         ##static parameter
         self.influxdb = "RET_Test"
-        self.influxdb_measurement = "RET_Test_" + str(self.list_buttons_positions) + "_[" + str(self.dx) + ";" + str(self.dy) + ";" + str(self.dz) + "]_AccelerationFactor_[" + str(self.acceleration_factor) + "]" +self.list_name_Btn + "[" + str(self.list_bouncetime) + "_"
+        self.influxdb_measurement = "RET_Test_" + self.list_name_Btn + str(self.list_buttons_positions) + "_[" + str(self.dx) + ";" + str(self.dy) + ";" + str(self.dz) + "]_AccelerationFactor_[" + str(self.acceleration_factor) + "]" +"_bouncetime_"+ "[" + str(self.list_bouncetime) + "_"
         self.influxdb_host = "localhost"
         self.influxdb_port = "8086"
         ##changing parameter
