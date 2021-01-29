@@ -1,0 +1,113 @@
+\hypertarget{a00041}{}\section{Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer Class Reference}
+\label{a00041}\index{Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}}
+
+
+The \hyperlink{a00041}{Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer} base class.  
+
+
+Inheritance diagram for Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{a00041}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{a00041_ae168de759b924eaf8c628e5b550bf9d6}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{a00041_a10275a078bd1abcbebc206cc5d19e18b}{connection}, client\+\_\+connection, \hyperlink{a00041_a0d71b5c1dcca8d3fee88d6a11d3e2071}{parameter})
+\begin{DoxyCompactList}\small\item\em The \hyperlink{a00041}{Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer} class initializer. \end{DoxyCompactList}\item 
+def \hyperlink{a00041_ad22709b2e67308af35f55680d5a026e0}{run} (self)
+\begin{DoxyCompactList}\small\item\em The \hyperlink{a00041}{Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer} run. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00041_a72425342c280a92ddf9d5f113cf11b9f}{conn\+\_\+client}
+\item 
+\hyperlink{a00041_a10275a078bd1abcbebc206cc5d19e18b}{connection}
+\item 
+\hyperlink{a00041_adf3bb5e317942dfceab6e24a8ccb0c84}{list\+\_\+msg}
+\begin{DoxyCompactList}\small\item\em put it as a attribute of the thread \end{DoxyCompactList}\item 
+\hyperlink{a00041_a0d71b5c1dcca8d3fee88d6a11d3e2071}{parameter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{a00041}{Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer} base class. 
+
+Defines the thread that is receiveing message from the computer 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a00041_ae168de759b924eaf8c628e5b550bf9d6}\label{a00041_ae168de759b924eaf8c628e5b550bf9d6}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def \+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{connection,  }\item[{}]{client\+\_\+connection,  }\item[{}]{parameter }\end{DoxyParamCaption})}
+
+
+
+The \hyperlink{a00041}{Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer} class initializer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & the connection to the socket opened between the Rpi and the computer \\
+\hline
+{\em client\+\_\+connection} & the connection to the client\+\_\+sender on the computer \\
+\hline
+{\em parameter} & the parameter that the Btn\+\_\+\+Pressing\+\_\+\+Detection has to deal with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a thread that receives the message from the computer 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a00041_ad22709b2e67308af35f55680d5a026e0}\label{a00041_ad22709b2e67308af35f55680d5a026e0}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}!run@{run}}
+\index{run@{run}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The \hyperlink{a00041}{Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer} run. 
+
+\begin{DoxyReturn}{Returns}
+a loop for the thread to run in or stop the test when the time of the test is completed When we received the message that the end effector is entering or leaving the button area, we log it 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{a00041_a72425342c280a92ddf9d5f113cf11b9f}\label{a00041_a72425342c280a92ddf9d5f113cf11b9f}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}!conn\+\_\+client@{conn\+\_\+client}}
+\index{conn\+\_\+client@{conn\+\_\+client}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}}
+\subsubsection{\texorpdfstring{conn\+\_\+client}{conn\_client}}
+{\footnotesize\ttfamily conn\+\_\+client}
+
+\mbox{\Hypertarget{a00041_a10275a078bd1abcbebc206cc5d19e18b}\label{a00041_a10275a078bd1abcbebc206cc5d19e18b}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}!connection@{connection}}
+\index{connection@{connection}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}}
+\subsubsection{\texorpdfstring{connection}{connection}}
+{\footnotesize\ttfamily connection}
+
+\mbox{\Hypertarget{a00041_adf3bb5e317942dfceab6e24a8ccb0c84}\label{a00041_adf3bb5e317942dfceab6e24a8ccb0c84}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}!list\+\_\+msg@{list\+\_\+msg}}
+\index{list\+\_\+msg@{list\+\_\+msg}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}}
+\subsubsection{\texorpdfstring{list\+\_\+msg}{list\_msg}}
+{\footnotesize\ttfamily list\+\_\+msg}
+
+
+
+put it as a attribute of the thread 
+
+\mbox{\Hypertarget{a00041_a0d71b5c1dcca8d3fee88d6a11d3e2071}\label{a00041_a0d71b5c1dcca8d3fee88d6a11d3e2071}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}!parameter@{parameter}}
+\index{parameter@{parameter}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket\+::\+Rpi\+\_\+\+Receive\+Msg\+\_\+\+Computer}}
+\subsubsection{\texorpdfstring{parameter}{parameter}}
+{\footnotesize\ttfamily parameter}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ubuntu/\+Buttons\+\_\+\+Pressing\+\_\+\+Detection/scripts/\hyperlink{a00014}{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+socket.\+py}\end{DoxyCompactItemize}

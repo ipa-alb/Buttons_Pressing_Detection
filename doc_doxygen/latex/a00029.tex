@@ -1,0 +1,178 @@
+\hypertarget{a00029}{}\section{Btn\+\_\+\+Pressing\+\_\+\+Detection Class Reference}
+\label{a00029}\index{Btn\+\_\+\+Pressing\+\_\+\+Detection@{Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+
+
+The \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} base class.  
+
+
+Inheritance diagram for Btn\+\_\+\+Pressing\+\_\+\+Detection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{a00029}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{a00029_ab81832d78db80da2cf38fa604fe38edb}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{a00029_a0d71b5c1dcca8d3fee88d6a11d3e2071}{parameter}, \hyperlink{a00029_a921d77252b5d9e078d906e8c2b745b49}{Btn})
+\begin{DoxyCompactList}\small\item\em The The \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} class initializer. \end{DoxyCompactList}\item 
+def \hyperlink{a00029_a939c51dd418f370caad2689fb0d438b6}{get\+\_\+times\+\_\+\+Btn\+\_\+change\+\_\+state} (self)
+\begin{DoxyCompactList}\small\item\em The The \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} get\+\_\+time\+\_\+\+Btn\+\_\+change\+\_\+state function. \end{DoxyCompactList}\item 
+def \hyperlink{a00029_ad22709b2e67308af35f55680d5a026e0}{run} (self)
+\begin{DoxyCompactList}\small\item\em The The \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} run. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00029_abd224cfc80b136898df89af7812fa8d5}{acceleration\+\_\+factor}
+\item 
+\hyperlink{a00029_a921d77252b5d9e078d906e8c2b745b49}{Btn}
+\item 
+\hyperlink{a00029_a32ff858bedd6a5ac76421d6a454f695c}{counting}
+\item 
+\hyperlink{a00029_acc53c2cac20bdbeee95a9059618d7c25}{current\+\_\+state}
+\item 
+\hyperlink{a00029_a256837dfa4a6a26c2b77dd9795cf8769}{former\+\_\+state}
+\item 
+\hyperlink{a00029_a0d71b5c1dcca8d3fee88d6a11d3e2071}{parameter}
+\item 
+\hyperlink{a00029_a153ea6721b57c14eea55728d46eae779}{robot\+\_\+settle\+\_\+time}
+\item 
+\hyperlink{a00029_a29a256a520b85082249eea9f0bae5508}{time\+\_\+between\+\_\+push\+\_\+unpushed}
+\item 
+\hyperlink{a00029_a72e7aa31ee9f2fbbbb3afdca9179cb28}{time\+\_\+push\+\_\+detected}
+\item 
+\hyperlink{a00029_acd1caad5b97caefebda2828b348c8100}{time\+\_\+unpush\+\_\+detected}
+\item 
+\hyperlink{a00029_a082e6ba9804a6094336b4c267262460e}{velocity\+\_\+factor}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} base class. 
+
+Defines the thread that is detecting the button pressing 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a00029_ab81832d78db80da2cf38fa604fe38edb}\label{a00029_ab81832d78db80da2cf38fa604fe38edb}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def \+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{parameter,  }\item[{}]{Btn }\end{DoxyParamCaption})}
+
+
+
+The The \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} class initializer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & the parameter that the \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} has to deal with \\
+\hline
+{\em Btn} & the button that teh \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} is applied to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a thread that detects the button pressing 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a00029_a939c51dd418f370caad2689fb0d438b6}\label{a00029_a939c51dd418f370caad2689fb0d438b6}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!get\+\_\+times\+\_\+\+Btn\+\_\+change\+\_\+state@{get\+\_\+times\+\_\+\+Btn\+\_\+change\+\_\+state}}
+\index{get\+\_\+times\+\_\+\+Btn\+\_\+change\+\_\+state@{get\+\_\+times\+\_\+\+Btn\+\_\+change\+\_\+state}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{get\+\_\+times\+\_\+\+Btn\+\_\+change\+\_\+state()}{get\_times\_Btn\_change\_state()}}
+{\footnotesize\ttfamily def get\+\_\+times\+\_\+\+Btn\+\_\+change\+\_\+state (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The The \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} get\+\_\+time\+\_\+\+Btn\+\_\+change\+\_\+state function. 
+
+\begin{DoxyReturn}{Returns}
+the change of state of the button, for how long it was pressed and the datetime it is not pressed anymore 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00029_ad22709b2e67308af35f55680d5a026e0}\label{a00029_ad22709b2e67308af35f55680d5a026e0}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!run@{run}}
+\index{run@{run}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def run (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+The The \hyperlink{a00029}{Btn\+\_\+\+Pressing\+\_\+\+Detection} run. 
+
+\begin{DoxyReturn}{Returns}
+a loop fort the thread to run in or stop the test when the time of the test is completed 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{a00029_abd224cfc80b136898df89af7812fa8d5}\label{a00029_abd224cfc80b136898df89af7812fa8d5}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!acceleration\+\_\+factor@{acceleration\+\_\+factor}}
+\index{acceleration\+\_\+factor@{acceleration\+\_\+factor}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{acceleration\+\_\+factor}{acceleration\_factor}}
+{\footnotesize\ttfamily acceleration\+\_\+factor}
+
+\mbox{\Hypertarget{a00029_a921d77252b5d9e078d906e8c2b745b49}\label{a00029_a921d77252b5d9e078d906e8c2b745b49}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!Btn@{Btn}}
+\index{Btn@{Btn}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{Btn}{Btn}}
+{\footnotesize\ttfamily Btn}
+
+\mbox{\Hypertarget{a00029_a32ff858bedd6a5ac76421d6a454f695c}\label{a00029_a32ff858bedd6a5ac76421d6a454f695c}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!counting@{counting}}
+\index{counting@{counting}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{counting}{counting}}
+{\footnotesize\ttfamily counting}
+
+\mbox{\Hypertarget{a00029_acc53c2cac20bdbeee95a9059618d7c25}\label{a00029_acc53c2cac20bdbeee95a9059618d7c25}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!current\+\_\+state@{current\+\_\+state}}
+\index{current\+\_\+state@{current\+\_\+state}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{current\+\_\+state}{current\_state}}
+{\footnotesize\ttfamily current\+\_\+state}
+
+\mbox{\Hypertarget{a00029_a256837dfa4a6a26c2b77dd9795cf8769}\label{a00029_a256837dfa4a6a26c2b77dd9795cf8769}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!former\+\_\+state@{former\+\_\+state}}
+\index{former\+\_\+state@{former\+\_\+state}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{former\+\_\+state}{former\_state}}
+{\footnotesize\ttfamily former\+\_\+state}
+
+\mbox{\Hypertarget{a00029_a0d71b5c1dcca8d3fee88d6a11d3e2071}\label{a00029_a0d71b5c1dcca8d3fee88d6a11d3e2071}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!parameter@{parameter}}
+\index{parameter@{parameter}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{parameter}{parameter}}
+{\footnotesize\ttfamily parameter}
+
+\mbox{\Hypertarget{a00029_a153ea6721b57c14eea55728d46eae779}\label{a00029_a153ea6721b57c14eea55728d46eae779}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!robot\+\_\+settle\+\_\+time@{robot\+\_\+settle\+\_\+time}}
+\index{robot\+\_\+settle\+\_\+time@{robot\+\_\+settle\+\_\+time}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{robot\+\_\+settle\+\_\+time}{robot\_settle\_time}}
+{\footnotesize\ttfamily robot\+\_\+settle\+\_\+time}
+
+\mbox{\Hypertarget{a00029_a29a256a520b85082249eea9f0bae5508}\label{a00029_a29a256a520b85082249eea9f0bae5508}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!time\+\_\+between\+\_\+push\+\_\+unpushed@{time\+\_\+between\+\_\+push\+\_\+unpushed}}
+\index{time\+\_\+between\+\_\+push\+\_\+unpushed@{time\+\_\+between\+\_\+push\+\_\+unpushed}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{time\+\_\+between\+\_\+push\+\_\+unpushed}{time\_between\_push\_unpushed}}
+{\footnotesize\ttfamily time\+\_\+between\+\_\+push\+\_\+unpushed}
+
+\mbox{\Hypertarget{a00029_a72e7aa31ee9f2fbbbb3afdca9179cb28}\label{a00029_a72e7aa31ee9f2fbbbb3afdca9179cb28}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!time\+\_\+push\+\_\+detected@{time\+\_\+push\+\_\+detected}}
+\index{time\+\_\+push\+\_\+detected@{time\+\_\+push\+\_\+detected}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{time\+\_\+push\+\_\+detected}{time\_push\_detected}}
+{\footnotesize\ttfamily time\+\_\+push\+\_\+detected}
+
+\mbox{\Hypertarget{a00029_acd1caad5b97caefebda2828b348c8100}\label{a00029_acd1caad5b97caefebda2828b348c8100}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!time\+\_\+unpush\+\_\+detected@{time\+\_\+unpush\+\_\+detected}}
+\index{time\+\_\+unpush\+\_\+detected@{time\+\_\+unpush\+\_\+detected}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{time\+\_\+unpush\+\_\+detected}{time\_unpush\_detected}}
+{\footnotesize\ttfamily time\+\_\+unpush\+\_\+detected}
+
+\mbox{\Hypertarget{a00029_a082e6ba9804a6094336b4c267262460e}\label{a00029_a082e6ba9804a6094336b4c267262460e}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}!velocity\+\_\+factor@{velocity\+\_\+factor}}
+\index{velocity\+\_\+factor@{velocity\+\_\+factor}!Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection@{Button\+\_\+\+Pressing\+\_\+\+Detection\+::\+Btn\+\_\+\+Pressing\+\_\+\+Detection}}
+\subsubsection{\texorpdfstring{velocity\+\_\+factor}{velocity\_factor}}
+{\footnotesize\ttfamily velocity\+\_\+factor}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/ubuntu/\+Buttons\+\_\+\+Pressing\+\_\+\+Detection/scripts/\hyperlink{a00002}{Button\+\_\+\+Pressing\+\_\+\+Detection.\+py}\end{DoxyCompactItemize}
