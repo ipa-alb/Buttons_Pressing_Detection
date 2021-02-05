@@ -54,15 +54,12 @@ class Btn_Pressing_Detection_Test(threading.Thread):
         pass
 
     def log_in_csv_file(self,row):
-        with open("/home/ubuntu/Buttons_Pressing_Detection/Btn_Pressing_Detection_Test/test_file/test_robot_settle_time"
-                  +str(robot_settle_time)+"_acceleration_factor"+str(acceleration_factor)+"_velocity_factor_"+str(velocity_factor)+".csv","aw") as f:
+        with open("/home/ubuntu/Buttons_Pressing_Detection/Btn_Pressing_Detection_Test/test_file/test_native_pilz_driver_3.csv","aw") as f:
             cr = csv.writer(f, delimiter=";",lineterminator="\n") 
             cr.writerow(row)
         pass
 
     def run(self):
-        time_start= time.time()
-        time_end = time.time()
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.Port, GPIO.IN,pull_up_down = GPIO.PUD_UP)
         while 1:

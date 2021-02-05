@@ -63,10 +63,8 @@ class RET_Parameter(config_test.Button_Definition):
         self.Btn_Pressed_in_Time_Interval = False
         #### Parameter that are to change during the RET concerning the data processing
         ##static parameter
-        self.influxdb = config_test.influxdb
-        self.influxdb_measurement = ("RET_Test_v1_" + self.list_name_Btn + str(self.list_buttons_positions) + "_[" + str(self.dx) + ";" + 
-        str(self.dy) + ";" + str(self.dz) +"]_AccelerationFactor_[" + str(self.acceleration_factor) +
-        "]_VelocityFactor_[" + str(self.velocity_factor) + "]" + "_robot_settle_time_[" + str(self.robot_settle_time) + "]_")
+        self.influxdb = config_test.influxdb + self.list_name_Btn + str(self.list_buttons_positions) + "_Button_areas_[" + str(self.dx) + ";" + str(self.dy) + ";" + str(self.dz) +"]"
+        self.influxdb_measurement = ("AccelerationFactor_[" + str(self.acceleration_factor) +"]_VelocityFactor_[" + str(self.velocity_factor) + "]" + "_robot_settle_time_[" + str(self.robot_settle_time) + "]_")
         ## we can also add a date to the measurement for more precision
         self.influxdb_host = config_test.influxdb_host
         self.influxdb_port = config_test.influxdb_port

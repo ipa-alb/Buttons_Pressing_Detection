@@ -62,6 +62,8 @@ class Btn_Pressing_Detection(threading.Thread):
                 print(self.Btn.Btn_name,"is pushed ",self.counting)
                 self.former_state = 0
                 self.time_push_detected = time.time()
+                self.parameter.time_Btn_Pressed= datetime.datetime.utcnow()
+                self.Btn.Btn_send_information = True
         if GPIO.input(self.Btn.Btn_Port)==1 and self.former_state == 0:
             self.current_state = 1
             if self.current_state != self.former_state :
@@ -69,10 +71,8 @@ class Btn_Pressing_Detection(threading.Thread):
                 self.former_state = 1
                 self.counting +=1
                 self.time_unpush_detected = time.time()
-                self.parameter.time_Btn_Pressed= datetime.datetime.utcnow()
-                print("time between push and unpushed = ", self.time_between_push_unpushed)
-                self.time_between_push_unpushed = self.time_unpush_detected - self.time_push_detected
-                self.Btn.Btn_send_information = True
+#                print("time between push and unpushed = ", self.time_between_push_unpushed)
+#                self.time_between_push_unpushed = self.time_unpush_detected - self.time_push_detected
                 time.sleep(0.05)
 
     def run(self):

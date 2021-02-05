@@ -16,16 +16,16 @@ stop_thread = False
 RET_time = 44000
 
 ## config of the parameter
-acceleration_factor = 1
+acceleration_factor = 3.49
 velocity_factor= 1.57
-robot_settle_time = 0.01
+robot_settle_time = 0.2
 dx = 0.06
-dy = 0.05
-dz = 0.02
+dy = 0.03
+dz = 0.01
 
 ## config of the socket
 socket_host = '10.4.11.117'
-socket_port = 5004
+socket_port = 5007
 
 ## config of the Influxdb
 influxdb = "RET_Test"
@@ -56,10 +56,10 @@ class Button_Definition():
 
 x1 = -0.1
 y1 = -0.45
-z1 = 0.159
+z1 = 0.145
 x2 = 0.05
 y2 = -0.45
-z2 =0.159
+z2 =0.145
 Btn1_name = "Btn1"
 Btn2_name = "Btn2"
 
