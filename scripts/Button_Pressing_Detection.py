@@ -8,6 +8,15 @@ Created on Tue Jan 19 13:53:33 2021
 
 #@file Button_Pressing_parameter.py
 #
+#@section Button_Pressing_Detection Description
+# The Button Pressing Detection is a class defined as a thread to be running while the RET is running. For an object of the Button_Definition type,
+# the Btn_Pressing_Detection thread detects the button pressing via a basic change of state detection.
+#
+#@section Button_Pressing_Detection Notes
+# I have rewrite a basic application from the beginning instead of using a function already made in the API such as detect_event, because we gain in accuracy 
+# using only the basic function, detecting the state.
+# Moreover, the function of the GPIO api, are to be used with specific button.
+#
 #@section libraries_Button_Pressing_Detection_RET Libraries/modules
 # Custom class:
 #   - Button_Definition in config_test
@@ -17,6 +26,9 @@ Created on Tue Jan 19 13:53:33 2021
 #   - time
 #   - datetime
 #   - threading
+#@section todo_Button_Pressing_Detection ToDo
+# Have a unique thread running for the button Detection for all the different buttons (Have addional processing when need to find everytime to which button 
+# the thread would have to set informations in)
 
 import RPi.GPIO as GPIO  
 
@@ -55,6 +67,7 @@ class Btn_Pressing_Detection(threading.Thread):
     def get_times_Btn_change_state(self):
         """! The The Btn_Pressing_Detection get_time_Btn_change_state function
         @return the change of state of the button, for how long it was pressed and the datetime it is not pressed anymore 
+        Once we get the parameter, a change of state, we are setting the parameter of the Button_Definition for it to know that the data can be processed
         """
         if GPIO.input(self.Btn.Btn_Port)==0 and self.former_state == 1:
             self.current_state = 0
@@ -62,7 +75,8 @@ class Btn_Pressing_Detection(threading.Thread):
                 print(self.Btn.Btn_name,"is pushed ",self.counting)
                 self.former_state = 0
                 self.time_push_detected = time.time()
-                self.parameter.time_Btn_Pressed= datetime.datetime.utcnow()
+                self.parameter.time_Btn_change_state= datetime.datetime.utcnow()
+                self.parameter.Btn_state = "pressed" 
                 self.Btn.Btn_send_information = True
         if GPIO.input(self.Btn.Btn_Port)==1 and self.former_state == 0:
             self.current_state = 1
@@ -71,6 +85,9 @@ class Btn_Pressing_Detection(threading.Thread):
                 self.former_state = 1
                 self.counting +=1
                 self.time_unpush_detected = time.time()
+                self.parameter.time_Btn_change_state= datetime.datetime.utcnow()
+                self.parameter.Btn_state = "unpressed" 
+                self.Btn.Btn_send_information = True
 #                print("time between push and unpushed = ", self.time_between_push_unpushed)
 #                self.time_between_push_unpushed = self.time_unpush_detected - self.time_push_detected
                 time.sleep(0.05)
@@ -78,6 +95,7 @@ class Btn_Pressing_Detection(threading.Thread):
     def run(self):
         """! The The Btn_Pressing_Detection run
         @return a loop fort the thread to run in or stop the test when the time of the test is completed
+        When that loops end, it close the whole RET testing application
         """
         time_start= time.time()
         time_end = time.time()

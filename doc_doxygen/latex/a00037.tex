@@ -25,6 +25,8 @@ def \hyperlink{a00037_af5c20d36ffa1a792d1aab7bcce87bf4b}{define\+\_\+measurement
 \item 
 \hyperlink{a00037_a73222c92f422e37740aa524320dd3b66}{Btn\+\_\+\+Pressed\+\_\+in\+\_\+\+Time\+\_\+\+Interval}
 \item 
+\hyperlink{a00037_aa7a64d5a735fcdbe65ff3dd6f55e4ac3}{Btn\+\_\+state}
+\item 
 \hyperlink{a00037_a7863230eddd33d64211a89a31cecb827}{Btn\+\_\+\+Unpressed\+\_\+\+Time}
 \item 
 \hyperlink{a00037_aacddc911cdfe5cd5ec97b084754542d4}{dx}
@@ -36,7 +38,7 @@ def \hyperlink{a00037_af5c20d36ffa1a792d1aab7bcce87bf4b}{define\+\_\+measurement
 \hyperlink{a00037_a034f595b48aad7217bd228d3620eaca8}{influxdb}
 \begin{DoxyCompactList}\small\item\em Parameter that are to change during the R\+ET concerning the data processing static parameter. \end{DoxyCompactList}\item 
 \hyperlink{a00037_a2c910a8a000ce837b18cf2959297dcce}{influxdb\+\_\+host}
-\begin{DoxyCompactList}\small\item\em we can also add a date to the measurement for more precision \end{DoxyCompactList}\item 
+\item 
 \hyperlink{a00037_a2951333e048b79a878571eafd1eee541}{influxdb\+\_\+measurement}
 \item 
 \hyperlink{a00037_a0d892e15d9fa78818d4495560d962ec2}{influxdb\+\_\+port}
@@ -69,7 +71,7 @@ def \hyperlink{a00037_af5c20d36ffa1a792d1aab7bcce87bf4b}{define\+\_\+measurement
 \item 
 \hyperlink{a00037_a0fc681ced6250a0d860270ba7db63e5a}{time\+\_\+begin\+\_\+\+R\+ET}
 \begin{DoxyCompactList}\small\item\em Global Parameter of the R\+ET. \end{DoxyCompactList}\item 
-\hyperlink{a00037_aeb9535b7bbd9a71cd537b64de9a114f2}{time\+\_\+\+Btn\+\_\+\+Pressed}
+\hyperlink{a00037_a13cf0cbef751ce5a38cbc978969dac95}{time\+\_\+\+Btn\+\_\+change\+\_\+state}
 \begin{DoxyCompactList}\small\item\em changing parameter \end{DoxyCompactList}\item 
 \hyperlink{a00037_a082e6ba9804a6094336b4c267262460e}{velocity\+\_\+factor}
 \item 
@@ -80,7 +82,7 @@ def \hyperlink{a00037_af5c20d36ffa1a792d1aab7bcce87bf4b}{define\+\_\+measurement
 \subsection{Detailed Description}
 The \hyperlink{a00037}{R\+E\+T\+\_\+\+Parameter} base class. 
 
-Defines the base class used by all all classes of the Button Pressing Detection applied in the R\+ET 
+Defines the base class used by all classes of the Button Pressing Detection applied in the R\+ET 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{a00037_ae2ab6faaa5ceb4d95a632635b03d437d}\label{a00037_ae2ab6faaa5ceb4d95a632635b03d437d}} 
@@ -132,6 +134,12 @@ the possibility for the user to launch the test or stop it before starting to lo
 \subsubsection{\texorpdfstring{Btn\+\_\+\+Pressed\+\_\+in\+\_\+\+Time\+\_\+\+Interval}{Btn\_Pressed\_in\_Time\_Interval}}
 {\footnotesize\ttfamily Btn\+\_\+\+Pressed\+\_\+in\+\_\+\+Time\+\_\+\+Interval}
 
+\mbox{\Hypertarget{a00037_aa7a64d5a735fcdbe65ff3dd6f55e4ac3}\label{a00037_aa7a64d5a735fcdbe65ff3dd6f55e4ac3}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}!Btn\+\_\+state@{Btn\+\_\+state}}
+\index{Btn\+\_\+state@{Btn\+\_\+state}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}}
+\subsubsection{\texorpdfstring{Btn\+\_\+state}{Btn\_state}}
+{\footnotesize\ttfamily Btn\+\_\+state}
+
 \mbox{\Hypertarget{a00037_a7863230eddd33d64211a89a31cecb827}\label{a00037_a7863230eddd33d64211a89a31cecb827}} 
 \index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}!Btn\+\_\+\+Unpressed\+\_\+\+Time@{Btn\+\_\+\+Unpressed\+\_\+\+Time}}
 \index{Btn\+\_\+\+Unpressed\+\_\+\+Time@{Btn\+\_\+\+Unpressed\+\_\+\+Time}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}}
@@ -171,10 +179,6 @@ Parameter that are to change during the R\+ET concerning the data processing sta
 \index{influxdb\+\_\+host@{influxdb\+\_\+host}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}}
 \subsubsection{\texorpdfstring{influxdb\+\_\+host}{influxdb\_host}}
 {\footnotesize\ttfamily influxdb\+\_\+host}
-
-
-
-we can also add a date to the measurement for more precision 
 
 \mbox{\Hypertarget{a00037_a2951333e048b79a878571eafd1eee541}\label{a00037_a2951333e048b79a878571eafd1eee541}} 
 \index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}!influxdb\+\_\+measurement@{influxdb\+\_\+measurement}}
@@ -296,11 +300,11 @@ add a raw input for the user to say yes or no \mbox{\Hypertarget{a00037_af2f1a29
 
 Global Parameter of the R\+ET. 
 
-\mbox{\Hypertarget{a00037_aeb9535b7bbd9a71cd537b64de9a114f2}\label{a00037_aeb9535b7bbd9a71cd537b64de9a114f2}} 
-\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}!time\+\_\+\+Btn\+\_\+\+Pressed@{time\+\_\+\+Btn\+\_\+\+Pressed}}
-\index{time\+\_\+\+Btn\+\_\+\+Pressed@{time\+\_\+\+Btn\+\_\+\+Pressed}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}}
-\subsubsection{\texorpdfstring{time\+\_\+\+Btn\+\_\+\+Pressed}{time\_Btn\_Pressed}}
-{\footnotesize\ttfamily time\+\_\+\+Btn\+\_\+\+Pressed}
+\mbox{\Hypertarget{a00037_a13cf0cbef751ce5a38cbc978969dac95}\label{a00037_a13cf0cbef751ce5a38cbc978969dac95}} 
+\index{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}!time\+\_\+\+Btn\+\_\+change\+\_\+state@{time\+\_\+\+Btn\+\_\+change\+\_\+state}}
+\index{time\+\_\+\+Btn\+\_\+change\+\_\+state@{time\+\_\+\+Btn\+\_\+change\+\_\+state}!Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter@{Button\+\_\+\+Pressing\+\_\+\+Detection\+\_\+parameter\+::\+R\+E\+T\+\_\+\+Parameter}}
+\subsubsection{\texorpdfstring{time\+\_\+\+Btn\+\_\+change\+\_\+state}{time\_Btn\_change\_state}}
+{\footnotesize\ttfamily time\+\_\+\+Btn\+\_\+change\+\_\+state}
 
 
 

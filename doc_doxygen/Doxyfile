@@ -1800,7 +1800,7 @@ LATEX_BATCHMODE        = NO
 # The default value is: NO.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
-LATEX_HIDE_INDICES     = NO
+LATEX_HIDE_INDICES     = YES
 
 # If the LATEX_SOURCE_CODE tag is set to YES then doxygen will include source
 # code with syntax highlighting in the LaTeX output.
@@ -1810,7 +1810,7 @@ LATEX_HIDE_INDICES     = NO
 # The default value is: NO.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
-LATEX_SOURCE_CODE      = NO
+LATEX_SOURCE_CODE      = YES
 
 # The LATEX_BIB_STYLE tag can be used to specify the style to use for the
 # bibliography, e.g. plainnat, or ieeetr. See
@@ -1826,7 +1826,7 @@ LATEX_BIB_STYLE        = plain
 # The default value is: NO.
 # This tag requires that the tag GENERATE_LATEX is set to YES.
 
-LATEX_TIMESTAMP        = NO
+LATEX_TIMESTAMP        = YES
 
 #---------------------------------------------------------------------------
 # Configuration options related to the RTF output

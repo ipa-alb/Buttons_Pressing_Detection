@@ -5,7 +5,7 @@ var searchData=
   ['test_5frunning',['test_running',['../a00023.html#ad6dd5511fc0d9b712fc3f74e188a7cb8',1,'Button_Pressing_Detection_RET']]],
   ['time_5fbegin_5fret',['time_begin_RET',['../a00037.html#a0fc681ced6250a0d860270ba7db63e5a',1,'Button_Pressing_Detection_parameter::RET_Parameter']]],
   ['time_5fbetween_5fpush_5funpushed',['time_between_push_unpushed',['../a00029.html#a29a256a520b85082249eea9f0bae5508',1,'Button_Pressing_Detection::Btn_Pressing_Detection']]],
-  ['time_5fbtn_5fpressed',['time_Btn_Pressed',['../a00037.html#aeb9535b7bbd9a71cd537b64de9a114f2',1,'Button_Pressing_Detection_parameter::RET_Parameter']]],
+  ['time_5fbtn_5fchange_5fstate',['time_Btn_change_state',['../a00037.html#a13cf0cbef751ce5a38cbc978969dac95',1,'Button_Pressing_Detection_parameter::RET_Parameter']]],
   ['time_5fpush_5fdetected',['time_push_detected',['../a00029.html#a72e7aa31ee9f2fbbbb3afdca9179cb28',1,'Button_Pressing_Detection::Btn_Pressing_Detection']]],
   ['time_5funpush_5fdetected',['time_unpush_detected',['../a00029.html#acd1caad5b97caefebda2828b348c8100',1,'Button_Pressing_Detection::Btn_Pressing_Detection']]],
   ['time_5fzero',['time_zero',['../a00033.html#a9037ca9407f51a787f95173288401aad',1,'Button_Pressing_Detection_data_processing::Rpi_data_processing_RET']]]

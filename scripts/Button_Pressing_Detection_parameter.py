@@ -8,19 +8,25 @@ Created on Tue Jan 19 13:55:11 2021
 
 #@file Button_Pressing_parameter.py
 #
+# @section Button_Pressing_parameter_description Description
+# We have decided to regroup all parameter in the same object so this object can be reused in every class application inherited from this class
+# The class parameter defines the database, the name of the measurement that are being used and take into account the list of all the buttons defined for the running test
+# It also add a small dialog with the user, for him to check if the configuration parameter are well set.
 #@section libraries_Button_Pressing_Detection_RET Libraries/modules
 # Custom class:
 #   - Button_Definition in config_test
 # Standard library:
 #   - datetime
-
+#@section Button_Pressing_parameter_todo ToDo
+#Have a RET_Parameter as message, so instead of sending string message with a processing of the message, we could be sending directly an object with all 
+# informations in it.
 
 import datetime
 import config_test
 
 class RET_Parameter(config_test.Button_Definition):
     """! The RET_Parameter base class.
-    Defines the base class used by all all classes of the Button Pressing Detection applied in the RET
+    Defines the base class used by all classes of the Button Pressing Detection applied in the RET
     """
     def __init__(self,list_buttons):
         """! The RET_Parameter class initializer
@@ -48,7 +54,8 @@ class RET_Parameter(config_test.Button_Definition):
             list_button_positions.append(list_buttons[i].z)
             self.list_buttons_positions.append(list_button_positions)
         ##changing parameter
-        self.time_Btn_Pressed = datetime.datetime.utcnow()
+        self.time_Btn_change_state = datetime.datetime.utcnow()
+        self.Btn_state = ""
         #### Parameter concerning the socket message
         ##static parameter
         self.socket_host = config_test.socket_host
@@ -63,9 +70,10 @@ class RET_Parameter(config_test.Button_Definition):
         self.Btn_Pressed_in_Time_Interval = False
         #### Parameter that are to change during the RET concerning the data processing
         ##static parameter
-        self.influxdb = config_test.influxdb + self.list_name_Btn + str(self.list_buttons_positions) + "_Button_areas_[" + str(self.dx) + ";" + str(self.dy) + ";" + str(self.dz) +"]"
-        self.influxdb_measurement = ("AccelerationFactor_[" + str(self.acceleration_factor) +"]_VelocityFactor_[" + str(self.velocity_factor) + "]" + "_robot_settle_time_[" + str(self.robot_settle_time) + "]_")
-        ## we can also add a date to the measurement for more precision
+        self.influxdb = "RET_Test"
+        self.influxdb_measurement = (config_test.influxdb + self.list_name_Btn + str(self.list_buttons_positions) + "_Button_areas_[" + str(self.dx) + ";" + str(self.dy) + 
+                         ";" + str(self.dz) +"]"+"AccelerationFactor_[" + str(self.acceleration_factor) +"]_VelocityFactor_[" + str(self.velocity_factor) + 
+                         "]" + "_robot_settle_time_[" + str(self.robot_settle_time) + "]_")
         self.influxdb_host = config_test.influxdb_host
         self.influxdb_port = config_test.influxdb_port
         ##changing parameter
