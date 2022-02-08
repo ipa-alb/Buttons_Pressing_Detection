@@ -93,23 +93,23 @@ class RET_Parameter(config_test.Button_Definition):
         print "Acceleration Factor = ", self.acceleration_factor 
         print "Writing in influxdb =: ", self.influxdb
         print "The real time processing is set to : ", self.realtime_processing, "\n"
-        chose_driver=raw_input("ROS or native?")
-        if chose_driver == "ROS":
-            self.RET_driver = "ROS"
-        if chose_driver == "native":
-            self.RET_driver = "native"
-        print("\nDo you want to continue?")
+        #chose_driver=raw_input("ROS or native?")
+        #if chose_driver == "ROS":
+        self.RET_driver = "ROS"
+        #if chose_driver == "native":
+        #    self.RET_driver = "native"
+        #print("\nDo you want to continue?")
         ## add a raw input for the user to say if we are running the test with the ROS driver or with the native driver
 
         ## add a raw input for the user to say yes or no
-        begin_test=raw_input("Y or N ?")
-        if begin_test == "N":
-            self.start_RET = False
-        else: 
-            print "\nThe RET begins at : ", self.time_begin_RET
-            self.influxdb_measurement += self.RET_driver
-            print "The data are logged in the measurement : ", self.influxdb_measurement   
-        pass
+        # begin_test=raw_input("Y or N ?")
+        #if begin_test == "N":
+        self.start_RET = False
+        #else: 
+         #   print "\nThe RET begins at : ", self.time_begin_RET
+          #  self.influxdb_measurement += self.RET_driver
+           # print "The data are logged in the measurement : ", self.influxdb_measurement   
+    #    pass
     
 
 if __name__ == "__main__":
