@@ -61,10 +61,10 @@ def main(list_buttons):
              
 
 if __name__ == "__main__":
-    test_running=raw_input("RET or BtnTesting?")
-    if test_running == "RET":
-        list_buttons = config_test.list_two_buttons_RET
-    if test_running == "BtnTesting":
-        list_buttons = config_test.list_one_button_testing
+    #test_running=raw_input("RET or BtnTesting?")
+    #if test_running == "RET":
+    list_buttons = config_test.list_two_buttons_RET
+    #if test_running == "BtnTesting":
+    #    list_buttons = config_test.list_one_button_testing
     main(list_buttons)
     
