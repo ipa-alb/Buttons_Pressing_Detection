@@ -35,7 +35,6 @@ import RPi.GPIO as GPIO
 import time
 import datetime
 import threading
-import Button_Pressing_Detection_parameter as RET_Param
 import config_test
 
 
@@ -101,6 +100,7 @@ class Btn_Pressing_Detection(threading.Thread):
         time_end = time.time()
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.Btn.Btn_Port, GPIO.IN,pull_up_down = GPIO.PUD_UP)
+        print(self.Btn.Btn_Port)
         while config_test.stop_thread == False and (time_end - time_start < config_test.RET_time):
             self.get_times_Btn_change_state()
             time_end = time.time()

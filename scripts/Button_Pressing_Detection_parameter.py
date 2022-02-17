@@ -104,7 +104,7 @@ class RET_Parameter(config_test.Button_Definition):
         ## add a raw input for the user to say yes or no
         # begin_test=raw_input("Y or N ?")
         #if begin_test == "N":
-        self.start_RET = False
+        #self.start_RET = False
         #else: 
          #   print "\nThe RET begins at : ", self.time_begin_RET
           #  self.influxdb_measurement += self.RET_driver

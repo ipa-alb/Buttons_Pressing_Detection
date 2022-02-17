@@ -105,6 +105,7 @@ class Rpi_SendMsg_Computer(threading.Thread):
         while config_test.stop_thread == False:
             for button in self.parameter.list_buttons:
                 if button.Btn_send_information == True:
+                    print("I am sending this info")
                     self.connection.send(str(self.parameter.time_Btn_change_state)+";"+button.Btn_name+";"+self.parameter.Btn_state)
                     button.Btn_send_information = False
 
@@ -119,10 +120,13 @@ class Rpi_SocketServer_RET(RET_Param.RET_Parameter):
         """
         self.mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         try:
-            self.mySocket.bind((parameter.socket_host, parameter.socket_port))
+            self.mySocket.connect((parameter.socket_host, parameter.socket_port))
         except socket.error:
             print "The link with the chosen address socket failed."
+            print(parameter.socket_host)
+            print( parameter.socket_port)
             sys.exit()
+            quit()
         print "Servor ready, waiting for answer.."
         self.mySocket.listen(5)
         connection, address = self.mySocket.accept()# Accept the connection of client
